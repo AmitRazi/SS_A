@@ -39,10 +39,11 @@ int main()
             printf(" %d", i);
         }
     }
-    printf("\n");
+    
+
 
     // print the palindrome numbers
-    printf("The Strong numbers are:");
+    printf("\nThe Strong numbers are:");
     for (int i = x; i <= y; i++)
     {
         if (isStrong(i) == 1)
@@ -50,7 +51,5 @@ int main()
             printf(" %d", i);
         }
     }
-    printf("\n");
-
     return 0;
 }
