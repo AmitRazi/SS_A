@@ -21,7 +21,9 @@ int main() {
         if(isPrime(i))
             printf(" %d",i);
     }
+    
     printf("\n");
+    
     printf("The Strong numbers are:");
     for(int i = a ; i <=b ; i++){
         if(isStrong(i))
