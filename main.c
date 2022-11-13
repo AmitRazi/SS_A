@@ -1,33 +1,56 @@
 #include <stdio.h>
+
 #include "NumClass.h"
-int main() {
-    int a,b;
-    scanf("%d%d",&a,&b);
+
+int main()
+{
+    // read the inputs x and y
+    int x = 0, y = 0;
+    scanf("%d%d", &x, &y);
+
+    // print the prime numbers
     printf("The Armstrong numbers are:");
-        for(int i = a ; i <=b ; i++){
-        if(isArmstrong(i))
-            printf(" %d",i);
+    for (int i = x; i <= y; i++)
+    {
+        if (isArmstrong(i) == 1)
+        {
+            printf(" %d", i);
+        }
     }
     printf("\n");
+
+    // print the Armstrong numbers
     printf("The Palindromes are:");
-    for(int i = a ; i <=b ; i++){
-        if(isPalindrome(i))
-            printf(" %d",i);
+    for (int i = x; i <= y; i++)
+    {
+        if (isPalindrome(i) == 1)
+        {
+            printf(" %d", i);
+        }
     }
     printf("\n");
-    
+
+    // print the strong numbers
     printf("The Prime numbers are:");
-    for(int i = a ; i <=b ; i++){
-        if(isPrime(i))
-            printf(" %d",i);
+    for (int i = x; i <= y; i++)
+    {
+        if (isPrime(i) == 1)
+        {
+            printf(" %d", i);
+        }
     }
-    
     printf("\n");
-    
+
+    // print the palindrome numbers
     printf("The Strong numbers are:");
-    for(int i = a ; i <=b ; i++){
-        if(isStrong(i))
-            printf(" %d",i);
+    for (int i = x; i <= y; i++)
+    {
+        if (isStrong(i) == 1)
+        {
+            printf(" %d", i);
+        }
     }
+    printf("\n");
+
     return 0;
 }
