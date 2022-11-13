@@ -17,17 +17,15 @@ int main() {
     printf("\n");
     
     printf("The Prime numbers are:");
-    printf("\n");
     for(int i = a ; i <=b ; i++){
         if(isPrime(i))
             printf(" %d",i);
     }
+    printf("\n");
     printf("The Strong numbers are:");
     for(int i = a ; i <=b ; i++){
         if(isStrong(i))
             printf(" %d",i);
     }
-    printf("\n");
-
     return 0;
 }
