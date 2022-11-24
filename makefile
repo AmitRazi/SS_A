@@ -3,7 +3,7 @@ AR=ar
 OBJECTS_MAIN=main.o
 OBJECTS_LIB=mylib.o
 FLAGS= -Wall
-all: mains maindloop maindrec libclassloops.a
+all: mains maindloop maindrec loops loopd recursives recursived
 mains: main.o libclassrec.a NumClass.h
 	$(CC) $(FLAGS) -o mains main.o libclassrec.a -lm
 	
