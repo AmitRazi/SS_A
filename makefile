@@ -13,14 +13,14 @@ maindloop: main.o NumClass.h libclassloops.so
 maindrec: main.o libclassrec.so NumClass.h
 	$(CC) $(FLAGS) main.o ./libclassrec.so -o maindrec -lm
 main.o: main.c
-	$(CC) $(FLAGS) -c main.c
+	$(CC) $(FLAGS) -c -fPIC main.c
 loops: libclassloops.a
 libclassloops.a: advancedClassificationLoop.o basicClassification.o
 	$(AR) -rcs libclassloops.a advancedClassificationLoop.o basicClassification.o
 advancedClassificationLoop.o: advancedClassificationLoop.c
-	$(CC) $(FLAGS) -c advancedClassificationLoop.c
+	$(CC) $(FLAGS) -c -fPIC advancedClassificationLoop.c
 basicClassification.o: 	basicClassification.c
-	$(CC) $(FLAGS) -c basicClassification.c
+	$(CC) $(FLAGS) -c -fPIC basicClassification.c
 recursives: libclassrec.a
 libclassrec.a: basicClassification.o advancedClassificationRecursion.o
 	$(AR) -rcs libclassrec.a basicClassification.o advancedClassificationRecursion.o
